@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Chateru</string>
+
+    <!-- Get Started -->
+    <string name="get_started_heading">Get Closer To \nEveryOne</string>
+    <string name="get_started_sub_heading">Helps you to contact everyone with \njust easy way</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
