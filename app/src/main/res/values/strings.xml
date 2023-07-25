@@ -5,5 +5,21 @@
     <string name="get_started_heading">Get Closer To \nEveryOne</string>
     <string name="get_started_sub_heading">Helps you to contact everyone with \njust easy way</string>
 
+    <!-- Login -->
+    <string name="login_login">Login</string>
+    <string name="login_signup">Sign Up</string>
+    <string name="login_or">Or</string>
+    <string name="login_welcome_back">Hello, Welcome back</string>
+    <string name="login_welcome_back_message">Happy to see you again, to use your \naccount please login first.</string>
+    <string name="login_email_address">Email Address</string>
+    <string name="login_enter_password">Password</string>
+    <string name="login_forgot_password">Forgot Password?</string>
+    <string name="login_alternate_option">---------------  Or Login with  ---------------</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Sign Up -->
+    <string name="signup_welcome">Hello, Welcome!</string>
+    <string name="signup_setup">Sign Up to Get Started</string>
+    <string name="signup_username">UserName</string>
+    <string name="signup_confirm_password">Confirm Password</string>
 </resources>

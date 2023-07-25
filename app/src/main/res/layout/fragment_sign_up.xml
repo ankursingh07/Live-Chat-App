@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.FragmentLogin">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g_horizontal_signup_start"
+        style="@style/g_horizontal_style"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g_horizontal_signup_mid"
+        style="@style/g_horizontal_style"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g_horizontal_signup_end"
+        style="@style/g_horizontal_style"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g_vertical_signup_start"
+        style="@style/g_vertical_style"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g_vertical_signup_end"
+        style="@style/g_vertical_style"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btn_signup_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/login_back_return_image"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="0.25"
+        android:backgroundTint="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/g_horizontal_signup_start"
+        app:layout_constraintStart_toStartOf="@id/g_vertical_signup_start"
+        app:layout_constraintEnd_toStartOf="@id/g_vertical_signup_end"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_welcome_signup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/AppTextGenericBold"
+        android:text="@string/signup_welcome"
+        android:textColor="#3A89E8"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="@id/g_vertical_signup_end"
+        app:layout_constraintBottom_toTopOf="@id/tv_happy_text_signup"
+        app:layout_constraintStart_toStartOf="@id/g_vertical_signup_start"
+        app:layout_constraintTop_toBottomOf="@id/g_horizontal_signup_start" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_happy_text_signup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/AppTextGenericRegular"
+        android:text="@string/signup_setup"
+        android:textColor="#497FCF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@id/g_vertical_signup_end"
+        app:layout_constraintBottom_toTopOf="@id/g_horizontal_signup_mid"
+        app:layout_constraintStart_toEndOf="@id/g_vertical_signup_start"
+        app:layout_constraintTop_toBottomOf="@id/tv_welcome_signup" />
+
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_enter_email_signup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingVertical="5dp"
+        android:text="@string/login_email_address"
+        style="@style/AppTextGenericMedium"
+        android:textSize="22sp"
+        app:layout_constraintTop_toBottomOf="@id/g_horizontal_signup_mid"
+        app:layout_constraintStart_toEndOf="@id/g_vertical_signup_start"
+        app:layout_constraintEnd_toStartOf="@id/g_vertical_signup_end"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_enter_email_signup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/AppTextGenericRegular"
+        android:textSize="22sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_enter_email_signup"
+        app:layout_constraintStart_toEndOf="@id/g_vertical_signup_start"
+        app:layout_constraintEnd_toStartOf="@id/g_vertical_signup_end"/>
+
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_enter_username"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingVertical="5dp"
+        android:text="@string/signup_username"
+        style="@style/AppTextGenericMedium"
+        android:textSize="22sp"
+        app:layout_constraintTop_toBottomOf="@id/et_enter_email_signup"
+        app:layout_constraintStart_toEndOf="@id/g_vertical_signup_start"
+        app:layout_constraintEnd_toStartOf="@id/g_vertical_signup_end"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_enter_username"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/AppTextGenericRegular"
+        android:textSize="22sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_enter_username"
+        app:layout_constraintStart_toEndOf="@id/g_vertical_signup_start"
+        app:layout_constraintEnd_toStartOf="@id/g_vertical_signup_end"/>
+
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_enter_password_signup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingVertical="5dp"
+        android:text="@string/login_enter_password"
+        style="@style/AppTextGenericMedium"
+        android:textSize="22sp"
+        app:layout_constraintTop_toBottomOf="@id/et_enter_username"
+        app:layout_constraintStart_toEndOf="@id/g_vertical_signup_start"
+        app:layout_constraintEnd_toStartOf="@id/g_vertical_signup_end"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_enter_password_signup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/AppTextGenericRegular"
+        android:textSize="22sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_enter_password_signup"
+        app:layout_constraintStart_toEndOf="@id/g_vertical_signup_start"
+        app:layout_constraintEnd_toStartOf="@id/g_vertical_signup_end"/>
+
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_enter_confirm_password_signup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingVertical="5dp"
+        android:text="@string/signup_confirm_password"
+        style="@style/AppTextGenericMedium"
+        android:textSize="22sp"
+        app:layout_constraintTop_toBottomOf="@id/et_enter_password_signup"
+        app:layout_constraintStart_toEndOf="@id/g_vertical_signup_start"
+        app:layout_constraintEnd_toStartOf="@id/g_vertical_signup_end"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_enter_confirm_password_signup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/AppTextGenericRegular"
+        android:textSize="22sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_enter_confirm_password_signup"
+        app:layout_constraintStart_toEndOf="@id/g_vertical_signup_start"
+        app:layout_constraintEnd_toStartOf="@id/g_vertical_signup_end"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_signup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        tools:text="@string/login_signup"
+        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintTop_toBottomOf="@id/et_enter_confirm_password_signup"
+        app:layout_constraintBottom_toTopOf="@id/g_horizontal_signup_end"
+        app:layout_constraintStart_toEndOf="@id/g_vertical_signup_start"
+        app:layout_constraintEnd_toStartOf="@id/g_vertical_signup_end" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_or_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login_or"
+        style="@style/AppTextGenericRegular"
+        app:layout_constraintTop_toBottomOf="@id/g_horizontal_signup_end"
+        app:layout_constraintStart_toEndOf="@id/g_vertical_signup_start"
+        app:layout_constraintEnd_toStartOf="@id/g_vertical_signup_end"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_btn_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        tools:text="@string/login_login"
+        android:textSize="24sp"
+        style="@style/AppTextGenericSemiBold"
+        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintTop_toBottomOf="@id/tv_or_signup"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/g_vertical_signup_start"
+        app:layout_constraintEnd_toStartOf="@id/g_vertical_signup_end" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
