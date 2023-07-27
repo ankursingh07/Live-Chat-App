@@ -12,4 +12,8 @@ class Navigation(private val mNavigation: Int) {
         const val SHOW_SIGNUP_FRAGMENT = 5
         const val HIDE_SIGNUP_FRAGMENT = 6
     }
+
+    fun getNavigation(): Int {
+        return mNavigation
+    }
 }

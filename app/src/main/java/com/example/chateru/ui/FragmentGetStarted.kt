@@ -4,16 +4,44 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.example.chateru.R
+import androidx.fragment.app.activityViewModels
+import com.example.chateru.databinding.FragmentGetStartedBinding
+import com.example.chateru.viewmodel.NavigationViewModel
 
 class FragmentGetStarted : Fragment() {
+
+    private val navigationViewModel: NavigationViewModel by activityViewModels()
+
+    private var _binding : FragmentGetStartedBinding? = null
+
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_get_started, container, false)
+        _binding = FragmentGetStartedBinding.inflate(inflater, container, false)
+        return binding.root
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        initClickListener()
+
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
+    }
+
+    private fun initClickListener() {
+        binding.btnGetStarted.setOnClickListener {
+            navigationViewModel.showLoginFragment()
+            Toast.makeText(requireContext(),"Clicked on Get Started",Toast.LENGTH_LONG).show()
+        }
+    }
+
 }
