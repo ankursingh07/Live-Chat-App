@@ -8,27 +8,27 @@
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/g_horizontal_login_start"
-        style="@style/g_horizontal_style"
+        style="@style/AppGuidelineHorizontal"
         app:layout_constraintGuide_percent="0.15" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/g_horizontal_login_welcome"
-        style="@style/g_horizontal_style"
+        style="@style/AppGuidelineHorizontal"
         app:layout_constraintGuide_percent="0.33" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/g_horizontal_login_details"
-        style="@style/g_horizontal_style"
+        style="@style/AppGuidelineHorizontal"
         app:layout_constraintGuide_percent="0.8" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/g_vertical_login_start"
-        style="@style/g_vertical_style"
+        style="@style/AppGuidelineVertical"
         app:layout_constraintGuide_percent="0.05" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/g_vertical_login_end"
-        style="@style/g_vertical_style"
+        style="@style/AppGuidelineVertical"
         app:layout_constraintGuide_percent="0.95" />
 
     <androidx.appcompat.widget.AppCompatImageButton

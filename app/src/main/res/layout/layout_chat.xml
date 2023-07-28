@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g_vertical_chat_start"
+        style="@style/AppGuidelineVertical"
+        app:layout_constraintGuide_percent="0.20"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g_vertical_chat_end"
+        style="@style/AppGuidelineVertical"
+        app:layout_constraintGuide_percent="0.82"/>
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_chat_photo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/g_vertical_chat_start" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_time_chat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="11:11 AM"
+        style="@style/AppTextGenericRegular"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/iv_chat_seen"
+        app:layout_constraintStart_toEndOf="@id/g_vertical_chat_end"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_chat_seen"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toBottomOf="@id/tv_time_chat"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/tv_time_chat"
+        app:layout_constraintStart_toStartOf="@id/tv_time_chat"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_name_chat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp"
+        android:hint="Ankur Singh"
+        style="@style/AppTextGenericMedium"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tv_text_chat"
+        app:layout_constraintStart_toEndOf="@id/g_vertical_chat_start"
+        app:layout_constraintEnd_toStartOf="@id/g_vertical_chat_end" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_text_chat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp"
+        android:hint="Hello Borther Kaise ho"
+        style="@style/AppTextGenericRegular"
+        android:textSize="15dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_name_chat"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/g_vertical_chat_start"
+        app:layout_constraintEnd_toStartOf="@id/g_vertical_chat_end" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
