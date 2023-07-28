@@ -8,22 +8,22 @@
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/g_horizontal_get_started_start"
-        style="@style/g_horizontal_style"
+        style="@style/AppGuidelineHorizontal"
         app:layout_constraintGuide_percent="0.2"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/g_horizontal_get_started_end"
-        style="@style/g_horizontal_style"
+        style="@style/AppGuidelineHorizontal"
         app:layout_constraintGuide_percent="0.8"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/g_vertical_get_started_start"
-        style="@style/g_vertical_style"
+        style="@style/AppGuidelineVertical"
         app:layout_constraintGuide_percent="0.05"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/g_vertical_get_started_end"
-        style="@style/g_vertical_style"
+        style="@style/AppGuidelineVertical"
         app:layout_constraintGuide_percent="0.95"/>
 
 
