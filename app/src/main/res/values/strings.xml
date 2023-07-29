@@ -25,6 +25,12 @@
     <!-- Home -->
     <string name="home_app_name">Chateru</string>
     <string name="home_search">Search in conversations</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <!-- Conversation -->
+    <string name="conversation_temp_text">Hi, Hello, Hey, Bye, Bye bye, see ya, what's up, what scene, crazy</string>
 
 
 </resources>

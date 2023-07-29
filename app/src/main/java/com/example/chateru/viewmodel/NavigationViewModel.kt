@@ -35,4 +35,20 @@ class NavigationViewModel : ViewModel() {
         mNavigation.value = Navigation(Navigation.HIDE_SIGNUP_FRAGMENT)
     }
 
+    fun showHomeFragment() {
+        mNavigation.value = Navigation(Navigation.SHOW_HOME_FRAGMENT)
+    }
+
+    fun hideHomeFragment() {
+        mNavigation.value = Navigation(Navigation.HIDE_HOME_FRAGMENT)
+    }
+
+    fun showConversationFragment() {
+        mNavigation.value = Navigation(Navigation.SHOW_CONVERSATION_FRAGMENT)
+    }
+
+    fun hideConversationFragment() {
+        mNavigation.value = Navigation(Navigation.HIDE_CONVERSATION_FRAGMENT)
+    }
+
 }
