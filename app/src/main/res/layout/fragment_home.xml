@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#D5E4E1"
     tools:context=".ui.FragmentHome">
 
     <androidx.constraintlayout.widget.Guideline
@@ -33,6 +34,7 @@
         android:text="@string/app_name"
         style="@style/AppTextGenericSemiBold"
         android:textSize="24sp"
+        android:textColor="#176BC3"
         app:layout_constraintStart_toEndOf="@id/g_vertical_home_start"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/g_horizontal_home_start"
@@ -42,7 +44,7 @@
     <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/btn_search"
         style="@style/AppIconGeneric"
-        android:backgroundTint="#FFFFFF"
+        android:background="#D5E4E1"
         android:src="@drawable/vd_search"
         app:layout_constraintBottom_toTopOf="@id/g_horizontal_home_start"
         app:layout_constraintEnd_toStartOf="@id/g_vertical_home_end"
@@ -53,7 +55,7 @@
     <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/btn_settings"
         style="@style/AppIconGeneric"
-        android:backgroundTint="#FFFFFF"
+        android:background="#D5E4E1"
         android:src="@drawable/vd_settings"
         app:layout_constraintBottom_toTopOf="@id/g_horizontal_home_start"
         app:layout_constraintEnd_toStartOf="@id/g_vertical_home_end"
@@ -83,7 +85,24 @@
         app:layout_constraintEnd_toStartOf="@id/g_vertical_home_end"
         app:layout_constraintBottom_toTopOf="@id/g_horizontal_home_end">
 
-
     </androidx.recyclerview.widget.RecyclerView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_home_add_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="25dp"
+        app:layout_constraintBottom_toTopOf="@id/g_horizontal_home_end"
+        app:layout_constraintEnd_toStartOf="@id/g_vertical_home_end">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btn_add_user_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/vd_adduser"
+            android:backgroundTint="#FFFFFF"
+            android:padding="0dp"/>
+
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
