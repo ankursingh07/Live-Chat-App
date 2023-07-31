@@ -6,7 +6,9 @@ import android.util.Log
 import androidx.activity.viewModels
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
+import com.example.chateru.ui.FragmentConversation
 import com.example.chateru.ui.FragmentGetStarted
+import com.example.chateru.ui.FragmentHome
 import com.example.chateru.ui.FragmentLogin
 import com.example.chateru.ui.FragmentSignUp
 import com.example.chateru.utils.Navigation
@@ -62,6 +64,22 @@ class BaseActivity : AppCompatActivity() {
 
             Navigation.HIDE_SIGNUP_FRAGMENT -> {
                 hideFragment(FragmentSignUp())
+            }
+
+            Navigation.SHOW_HOME_FRAGMENT -> {
+                showFragment(FragmentHome())
+            }
+
+            Navigation.HIDE_HOME_FRAGMENT -> {
+                hideFragment(FragmentHome())
+            }
+
+            Navigation.SHOW_CONVERSATION_FRAGMENT -> {
+                showFragment(FragmentConversation())
+            }
+
+            Navigation.HIDE_CONVERSATION_FRAGMENT -> {
+                hideFragment(FragmentConversation())
             }
 
         }

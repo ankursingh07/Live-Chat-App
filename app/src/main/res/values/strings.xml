@@ -30,7 +30,7 @@
 
 
     <!-- Conversation -->
-    <string name="conversation_temp_text">Hi, Hello, Hey, Bye, Bye bye, see ya, what's up, what scene, crazy</string>
+    <string name="conversation_temp_text">Hi, Hello, Hey, Bye, Bye bye, see ya, what\'s up, what scene, crazy</string>
 
 
 </resources>
