@@ -99,5 +99,4 @@ class BaseActivity : AppCompatActivity() {
             remove(fragment)
         }
     }
-
 }
