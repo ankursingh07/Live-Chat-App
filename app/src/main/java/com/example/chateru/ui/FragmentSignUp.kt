@@ -41,6 +41,7 @@ class FragmentSignUp : Fragment() {
             Toast.makeText(requireContext(),"Clicked on Back Button",Toast.LENGTH_LONG).show()
         }
         binding.btnSignup.setOnClickListener {
+            navigationViewModel.showHomeFragment()
             Toast.makeText(requireContext(),"Clicked on Sign Up Button",Toast.LENGTH_LONG).show()
         }
 
