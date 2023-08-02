@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.chateru.R
@@ -30,7 +31,8 @@ class FragmentHome : Fragment() , AdapterHome.OnItemClickListener{
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        initClickListener()
+        initRecyclerView()
     }
 
     override fun onDestroy() {
@@ -40,6 +42,13 @@ class FragmentHome : Fragment() , AdapterHome.OnItemClickListener{
     private fun initRecyclerView() {
         binding.rvHome.adapter=  AdapterHome(this)
         binding.rvHome.layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.VERTICAL,false)
+
+    }
+
+    private fun initClickListener(){
+        binding.btnAddUserHome.setOnClickListener {
+            navigationViewModel.showConversationFragment()
+        }
 
     }
 

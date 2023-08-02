@@ -7,14 +7,17 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.fragment.app.viewModels
 import com.example.chateru.R
 import com.example.chateru.databinding.FragmentLoginBinding
+import com.example.chateru.viewmodel.LoginViewModel
 import com.example.chateru.viewmodel.NavigationViewModel
 import org.koin.androidx.viewmodel.ext.android.activityViewModel
 
 class FragmentLogin : Fragment() {
 
     val navigationViewModel: NavigationViewModel by activityViewModels()
+    val loginViewModel : LoginViewModel by activityViewModels()
 
     private var _binding : FragmentLoginBinding? = null
     private val binding get() = _binding!!
@@ -24,6 +27,24 @@ class FragmentLogin : Fragment() {
     ): View? {
         _binding = FragmentLoginBinding.inflate(inflater,container,false)
         return binding.root
+    }
+
+    private fun initObserver() {
+        loginViewModel.getLogInState().observe(this) {
+            it?.let {
+
+            }
+        }
+        loginViewModel.getEmail().observe(this) {
+            it?.let {
+
+            }
+        }
+        loginViewModel.getPassword().observe(this) {
+            it?.let {
+
+            }
+        }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
